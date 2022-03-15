@@ -29,9 +29,15 @@ $routes->setAutoRoute(true);
  * --------------------------------------------------------------------
  */
 
+$routes->match(['get', 'post'], 'news/create', 'Recipes::create');
+
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
+
+$routes->get('recipes/(:segment)', 'Recipes::view/$1');
+$routes->get('recipes', 'Recipes::index');
+$routes->get('(:any)', 'Pages::view/$1');
 
 /*
  * --------------------------------------------------------------------
