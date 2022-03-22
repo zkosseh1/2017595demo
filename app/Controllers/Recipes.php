@@ -6,13 +6,61 @@ use App\Models\RecipesModel;
 
 class Recipes extends BaseController
 {
+	public function amend($id)
+	{
+		$model = model(RecipesModel::class);
+
+			$data = ['news' => $model->edit($id),];
+
+			
+			
+			echo view('templates/header', ['title' => 'Update Article']);
+			echo view('news/amend', $data);
+			echo view('templates/footer');
+		
+	}
+	
+	public function update_recipe(){
+		
+	helper(['form']);
+	
+	$data = [
+			'title' => $this->request->getVar('title'),
+			'body' => $this->request->getVar('body'),
+			'id' => $this->request->getVar('id'),
+			];
+	$db = \Config\Database::connect();
+	
+	$this->builder = $db->table('news')
+	->set('title', $data['title'])
+	->set('body', $data['body'])
+	->where('id', $data['id'])->update();
+	return redirect()->to('recipes');
+		
+		
+
+		
+	}
+	
+	public function delete($slug)
+	{
+		print("Delete Article: ".$slug);
+	
+		$model = model(RecipesModel::class);
+		
+		$model->deleteNews($slug);
+		
+		return redirect()->to('recipes');
+	}
+	
+	
 	public function index()
 	{
 		$model = model(RecipesModel::class);
 
 		$data = [
 			'news'  => $model->getNews(),
-			'title' => "Zanah's Cooking",
+			'title' => "Home",
 		];
 
 		echo view('templates/header', $data);

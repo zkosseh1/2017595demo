@@ -16,5 +16,5 @@
 		<textarea input class="form-control" name="body" cols="45" rows="4"></textarea><br />
 	</div>
 	
-    <input class="btn btn-success" type="submit" name="submit" value="Post New Article" />
+    <input class="btn btn-outline-success" type="submit" name="submit" value="Post New Article" />
 </form>

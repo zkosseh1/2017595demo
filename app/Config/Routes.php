@@ -37,7 +37,7 @@ $routes->get('/', 'Home::index');
 
 $routes->get('recipes/(:segment)', 'Recipes::view/$1');
 $routes->get('recipes', 'Recipes::index');
-$routes->get('(:any)', 'Pages::view/$1');
+//$routes->get('(:any)', 'Pages::view/$1');
 
 /*
  * --------------------------------------------------------------------
