@@ -7,7 +7,7 @@ use CodeIgniter\Model;
 class RecipesModel extends Model
 {
     protected $table = 'news';
-	protected $allowedFields = ['title', 'slug', 'body'];
+	protected $allowedFields = ['title', 'slug', 'body', 'images'];
 	
 	public function getNews($slug = false)
 	{

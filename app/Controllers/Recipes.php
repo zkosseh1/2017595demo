@@ -26,6 +26,7 @@ class Recipes extends BaseController
 	
 	$data = [
 			'title' => $this->request->getVar('title'),
+			'images'=> $this->request->getVar('images'),
 			'body' => $this->request->getVar('body'),
 			'id' => $this->request->getVar('id'),
 			];
@@ -33,6 +34,7 @@ class Recipes extends BaseController
 	
 	$this->builder = $db->table('news')
 	->set('title', $data['title'])
+	->set('images', $data['images'])
 	->set('body', $data['body'])
 	->where('id', $data['id'])->update();
 	return redirect()->to('recipes');
@@ -91,11 +93,15 @@ class Recipes extends BaseController
 		if ($this->request->getMethod() === 'post' && $this->validate([
 			'title' => 'required|min_length[3]|max_length[255]',
 			'body'  => 'required',
+			'images'=> 'required',
+			
 		])) {
 			$model->save([
 				'title' => $this->request->getPost('title'),
 				'slug'  => url_title($this->request->getPost('title'), '-', true),
 				'body'  => $this->request->getPost('body'),
+				'images'=> $this->request->getPost('images'),
+				
 			]);
 
 			return redirect()->to('recipes');
@@ -105,4 +111,6 @@ class Recipes extends BaseController
 			echo view('templates/footer');
 		}
 	}
+	
+	
 }

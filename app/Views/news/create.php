@@ -16,5 +16,11 @@
 		<textarea input class="form-control" name="body" cols="45" rows="4"></textarea><br />
 	</div>
 	
+	<div class="mb-3">
+		<label for="body" class="form-label">Article Image Link</label>
+		<textarea input class="form-control" name="images" cols="45" rows="2"></textarea><br />
+	</div>
+	
+	
     <input class="btn btn-outline-success" type="submit" name="submit" value="Post New Article" />
 </form>

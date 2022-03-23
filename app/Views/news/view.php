@@ -1,7 +1,7 @@
 <div class="card mb-3" style="max-width: 800px;">
   <div class="row g-0">
     <div class="col-md-4">
-      <img src="<?= esc($news['secondimg']) ?>" class="img-fluid" alt="...">
+      <img src="<?= esc($news['images']) ?>" class="img-fluid" alt="...">
     </div>
     <div class="col-md-8">
       <div class="card-body">
