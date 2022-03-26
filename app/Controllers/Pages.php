@@ -22,4 +22,4 @@ class Pages extends BaseController
 		echo view('pages/' . $page, $data);
 		echo view('templates/footer', $data);
 	}
-}
+	
