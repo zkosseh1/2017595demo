@@ -9,12 +9,12 @@
   <body>
     <div class="container">
 	
-	<div class="p-3 mb-2 bg-success text-white"><h2>Home</h2></div>
+
 	
 	<div class="align-content-lg-start"><h2></h2></div>
 	
         <div class="d-flex align-items-stretch">
-            <div class="col-8">
+            <div class="col-5">
                 
                 <h2>Login in</h2>
                 

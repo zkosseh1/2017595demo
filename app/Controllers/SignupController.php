@@ -9,8 +9,9 @@ class SignupController extends Controller
     {
         helper(['form']);
         $data = ['title' => "signup",];
-        echo view('signup', $data);
+		
 		echo view('templates/header', $data);
+        echo view('signup', $data);
 		echo view('templates/footer', $data);
     }
   

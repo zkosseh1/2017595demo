@@ -15,8 +15,9 @@ class SigninController extends Controller
 		];
 		
         helper(['form']);
-        echo view('signin');
+		
 		echo view('templates/header', $data);
+        echo view('signin');
 		echo view('templates/footer', $data);
     } 
   
