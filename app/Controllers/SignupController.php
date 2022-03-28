@@ -8,11 +8,8 @@ class SignupController extends Controller
     public function index()
     {
         helper(['form']);
-        $data = ['title' => "signup",];
-		
-		echo view('templates/header', $data);
+        $data = [];
         echo view('signup', $data);
-		echo view('templates/footer', $data);
     }
   
     public function store()
@@ -37,7 +34,6 @@ class SignupController extends Controller
         }else{
             $data['validation'] = $this->validator;
             echo view('signup', $data);
-			
         }
           
     }

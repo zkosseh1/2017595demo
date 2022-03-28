@@ -30,7 +30,7 @@
                         <input type="password" name="confirmpassword" placeholder="Confirm Password" class="form-control" >
                     </div>
                     <div class="d-grid">
-                        <button type="submit" class="btn btn-success">Signup</button>
+                        <button type="submit" class="btn btn-dark">Signup</button>
                     </div>
                 </form>
             </div>

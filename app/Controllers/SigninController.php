@@ -7,18 +7,8 @@ class SigninController extends Controller
 {
     public function index()
     {
-		$model = model(RecipesModel::class);
-
-		$data = [
-			'news'  => $model->getNews(),
-			'title' => "Home",
-		];
-		
         helper(['form']);
-		
-		echo view('templates/header', $data);
         echo view('signin');
-		echo view('templates/footer', $data);
     } 
   
     public function loginAuth()
@@ -52,6 +42,4 @@ class SigninController extends Controller
             return redirect()->to('/signin');
         }
     }
-	
-	
 }

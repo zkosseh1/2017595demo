@@ -13,4 +13,3 @@
 <body>
 	<div class="container-fluid">
 		<?php echo view("templates/navbar"); ?>
-		<h1><?= esc($title) ?></h1>

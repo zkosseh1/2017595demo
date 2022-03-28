@@ -22,11 +22,6 @@ $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
 $routes->setAutoRoute(true);
-// custom routes
-$routes->get('/', 'SignupController::index');
-$routes->get('/signup', 'SignupController::index');
-$routes->get('/signin', 'SigninController::index');
-$routes->get('/profile', 'ProfileController::index',['filter' => 'authGuard']);
 
 /*
  * --------------------------------------------------------------------
@@ -42,6 +37,11 @@ $routes->get('/', 'Home::index');
 
 $routes->get('recipes/(:segment)', 'Recipes::view/$1');
 $routes->get('recipes', 'Recipes::index');
+$routes->get('/', 'SignupController::index');
+$routes->get('/signup', 'SignupController::index');
+$routes->get('/signin', 'SigninController::index');
+
+
 //$routes->get('(:any)', 'Pages::view/$1');
 
 /*
