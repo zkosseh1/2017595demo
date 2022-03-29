@@ -7,17 +7,17 @@
     <?= csrf_field() ?>
 
 	<div class="mb-3">
-		<label for="title" class="form-label">Recipe Title</label>
+		<label for="title" class="form-label"> Title</label>
 		<input class="form-control" type="input" name="title" /><br />
 	</div>
 	
 	<div class="mb-3">
-		<label for="body" class="form-label">Recipe Text</label>
+		<label for="body" class="form-label"> Text</label>
 		<textarea input class="form-control" name="body" cols="45" rows="4"></textarea><br />
 	</div>
 	
 	<div class="mb-3">
-		<label for="body" class="form-label">Recipe Image Link</label>
+		<label for="body" class="form-label"> Image Link</label>
 		<textarea input class="form-control" name="images" cols="45" rows="2"></textarea><br />
 	</div>
 	

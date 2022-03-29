@@ -106,7 +106,7 @@ class Recipes extends BaseController
 
 			return redirect()->to('recipes');
 		} else {
-			echo view('templates/header', ['title' => 'Create A New Article']);
+			echo view('templates/header', ['title' => 'Post A New Recipe']);
 			echo view('news/create');
 			echo view('templates/footer');
 		}
