@@ -37,9 +37,7 @@ $routes->get('/', 'Home::index');
 
 $routes->get('recipes/(:segment)', 'Recipes::view/$1');
 $routes->get('recipes', 'Recipes::index');
-$routes->get('/', 'SignupController::index');
-$routes->get('/signup', 'SignupController::index');
-$routes->get('/signin', 'SigninController::index');
+$routes->get('/randomrecipe', 'RandomRecipe::getRandomRecipe');
 
 
 //$routes->get('(:any)', 'Pages::view/$1');
