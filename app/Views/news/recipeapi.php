@@ -1,7 +1,7 @@
 
 
 <div class="row">
-		<div class="col-lg-5">
+		<div class="col-lg-5 my-2">
 		<h2><?= $response['0']['title'] ?></h2>
 		<img src="<?= $response['0']['image'] ?>" class="img-fluid rounded mx-auto d-block " alt="...">
 		<h2>Ingredients</h2>
