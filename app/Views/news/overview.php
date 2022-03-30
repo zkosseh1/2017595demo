@@ -22,11 +22,12 @@
 			<h5 class="card-title"><p class="text-center"><?= esc($news_item['title']) ?></h5>
 			<img src="<?= esc($news_item['images']) ?>" class="img-fluid rounded mx-auto d-block w-50" alt="...">
 			</div>
-		  <div class="card-footer">
+		  <div class="card-footer"><div class="text-center">
 			<a href="<?=base_url()?>/recipes/<?= esc($news_item['slug'], 'url') ?>" class="btn btn-outline-success">View</a>
 			<a href="<?=base_url()?>/recipes/amend/<?= esc($news_item['id'], 'url') ?>" class="btn btn-outline-primary">Edit</a>
 			<a href="<?=base_url ()?>/recipes/delete/<?= esc($news_item['slug'], 'url') ?>" class="btn btn-outline-danger">Delete</a>
 			<button class="btn btn-outline-secondary" onclick="getData('<?= esc($news_item['slug'], 'url') ?>')">Ajax</button>
+			</div>
 		 </div>
 		</div>
 		</div>
