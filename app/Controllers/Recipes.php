@@ -40,7 +40,7 @@ class Recipes extends BaseController
 	return redirect()->to('recipes');
 		
 		
-
+	//amend or edit is made up of functions: amend and update
 		
 	}
 	
@@ -64,7 +64,7 @@ class Recipes extends BaseController
 			'news'  => $model->getNews(),
 			'title' => "Home",
 		];
-
+		//displays the overiview, navbar and footer
 		echo view('templates/header', $data);
 		echo view('news/overview', $data);
 		echo view('templates/footer', $data);

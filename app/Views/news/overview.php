@@ -34,14 +34,14 @@
 	<script>
 	function getData(slug) {
 		
-		// Fetch data
+		// Fetch data from database
 		fetch('https://mi-linux.wlv.ac.uk/~2017595/ci4-demo/public/index.php/ajax/get/'  + slug)
 			
 		  // Convert response string to json object
 		  .then(response => response.json())
 		  .then(response => {
 
-			// Copy one element of response to our HTML paragraph
+			
 			let recipe = document.getElementById("ajaxArticle");
 			recipe.className = 'alert alert-primary';
 			recipe.innerHTML = response.title + ": " + response.body;

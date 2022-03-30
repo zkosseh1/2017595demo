@@ -10,7 +10,7 @@ class Ajax extends BaseController
 	{
 		$model = model(RecipesModel::class);
 		$data = $model->getNews($slug);
-
+		//retrieves data from model & converts it to JSON code
 		print(json_encode($data));
 	}
 	
