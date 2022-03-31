@@ -1,9 +1,22 @@
+<!-- Background image -->
+<div
+  class="bg-image p-3"
+  style="
+    background-image: url('https://i.etsystatic.com/14403653/r/il/8eb7e9/2218117301/il_fullxfull.2218117301_hyt4.jpg');
+    height: 100vh;
+  "
+
+<!-- Background image -->
+
+
+
+
 <h2><?= esc($title) ?></h2>
 
 <?= session()->getFlashdata('error') ?>
 <?= service('validation')->listErrors() ?>
 
-<form action="<?=base_url()?>/news/create" method="post">
+<form class= "p-3" action="<?=base_url()?>/news/create" method="post">
     <?= csrf_field() ?>
 
 	<div class="mb-3">
@@ -22,5 +35,7 @@
 	</div>
 	
 	
-    <input class="btn btn-outline-success" type="submit" name="submit" value="Post New Recipe" />
+    <input class="btn btn-success" type="submit" name="submit" value="Post New Recipe" />
 </form>
+
+</div>

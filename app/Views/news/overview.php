@@ -1,3 +1,15 @@
+<div
+  class="bg-image p-3"
+  style="
+    background-image: url('https://i.etsystatic.com/14403653/r/il/8eb7e9/2218117301/il_fullxfull.2218117301_hyt4.jpg');
+    
+	
+  ">
+
+
+
+
+
 
 <a class="btn btn-success my-3" href="<?=base_url()?>/news/create">Add Recipe</a>
 
@@ -25,7 +37,7 @@
 		  <div class="card-footer"><div class="text-center">
 			<a href="<?=base_url()?>/recipes/<?= esc($news_item['slug'], 'url') ?>" class="btn btn-outline-success">View</a>
 			<a href="<?=base_url()?>/recipes/amend/<?= esc($news_item['id'], 'url') ?>" class="btn btn-outline-primary">Edit</a>
-			<a href="<?=base_url ()?>/recipes/delete/<?= esc($news_item['slug'], 'url') ?>" class="btn btn-outline-danger">Delete</a>
+			<a href="<?=base_url ()?>/recipes/delete/<?= esc($news_item['slug'], 'url') ?>"onClick="return confirm('Are you sure you want to delete this recipe?')" class="btn btn-outline-danger">Delete</a>
 			<button class="btn btn-outline-secondary" onclick="getData('<?= esc($news_item['slug'], 'url') ?>')">Ajax</button>
 			</div>
 		 </div>
@@ -66,3 +78,5 @@
     <p>Unable to find any news for you.</p>
 
 <?php endif ?>
+
+</div>

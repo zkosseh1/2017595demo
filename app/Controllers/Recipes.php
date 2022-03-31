@@ -12,9 +12,9 @@ class Recipes extends BaseController
 
 			$data = ['news' => $model->edit($id),];
 
+//displays already pre-existing data
 			
-			
-			echo view('templates/header', ['title' => 'Update Article']);
+			echo view('templates/header', ['title' => 'Update Recipe']);
 			echo view('news/amend', $data);
 			echo view('templates/footer');
 		
@@ -31,7 +31,7 @@ class Recipes extends BaseController
 			'id' => $this->request->getVar('id'),
 			];
 	$db = \Config\Database::connect();
-	
+//updates changes made to database
 	$this->builder = $db->table('news')
 	->set('title', $data['title'])
 	->set('images', $data['images'])
@@ -54,7 +54,7 @@ class Recipes extends BaseController
 		
 		return redirect()->to('recipes');
 	}
-	
+//delete function drops an entry from database
 	
 	public function index()
 	{
@@ -111,6 +111,6 @@ class Recipes extends BaseController
 			echo view('templates/footer');
 		}
 	}
-	
+//this controller states requirements, checks validation then creates new database entry
 	
 }
